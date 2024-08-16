@@ -1,0 +1,8 @@
+16/08/2024
+
+Initiated Portfolio Project
+	# Set Up Initial Page - About Page.
+	# About page is our home page
+	# Connected to S3 buckets for storing and using images
+	# Certifications section is not complete. Need to connect to RDS for completion.
+	# Entered gitignore.

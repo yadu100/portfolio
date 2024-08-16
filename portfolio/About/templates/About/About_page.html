@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+
+    <!-- Custom CSS for about page -->
+    <link rel="stylesheet" href="{% static 'styles/About_page.css' %}">
+
+    <!-- Bootstrap Connect -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>yd - portfolio</title>
+</head>
+<body class="bg-light">
+
+<!-- Navigation -->
+
+    <nav class="navbar navbar-expand-md navbar-light px-5  " >
+
+
+            <a class="navbar-brand " href="{% url 'About' %}">
+            <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/My+Logo.svg" alt="My Logo" width="75px">
+            </a>
+
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link active new-amsterdam-regular mx-2" href="{% url 'About' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link new-amsterdam-regular mx-2" href="#">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link new-amsterdam-regular mx-2" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link new-amsterdam-regular mx-2" href="#">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link new-amsterdam-regular mx-2 border border-primary text-primary rounded-pill text-center">Say Hello</a>
+                    </li>
+                </ul>
+            </div>
+   
+    </nav>
+<!-- End of Navigation -->
+
+<!-- Word Intro -->
+
+    <div class="container-fluid p-5 text-center mb-0" >
+            <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/my+pic.jpg" alt="" width="400px" height="400px" class="border rounded-pill" style="box-shadow: 0 0 10px hwb(200 15% 84%);">
+            <br><br><br><br>
+            <h1 class="display-5 font-weight-bold">Designer, Full Stack Developer & Mentor</h1>
+            <br>
+            <h3 class="dancing-script-lead">I design and build simple things and love what I do</h3>
+            <br><br><br>
+            <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/computer.svg" alt="devices" width="50%">
+    </div>
+<!-- End of Word Intro -->
+
+<!-- Basic Intro -->
+
+    <div class="container-fluid p-5 text-center mb-0 text-dark" style="background-color: #F8787D;">
+        <h3 class="sedan-regular font-weight-bold display-4">Hi, I'm Yadu. Nice to meet you</h3>
+        <br><br>
+        <p class="sedan-regular-italic display-5">With 3 years of experience as a Python developer, I've specialized in building dynamic websites using Django and front-end tools. <br> My work includes designing and developing robust web applications and managing databases with PostgreSQL. <br> I'm passionate about coding, continuously honing my skills, and eager to tackle new challenges in the ever-evolving tech landscape.</p>
+    </div>
+<!-- End of Basic Intro -->
+
+<!-- Academics -->
+
+    <div class="container-fluid p-5 text-center my-0 text-dark " >
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="row p-3">
+                    <div class="col-sm-12">
+                        <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/academics.png" alt="academics" width="60%">
+                        <p class="display-4 sedan-regular-italic">Academics</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6  p-5 sedan-regular-italic" >
+                <p class=" m-5 text-justify">I graduated with a <strong>Bachelor of Engineering</strong>  in <strong>Electronics and Communication Engineering</strong>  from <strong> Government Engineering College, Thrissur</strong>, achieving an <strong>8.61 CGPA</strong> . During my time at college, I cultivated a deep interest in Python, which laid the groundwork for my career as a developer. My passion for programming led me to pursue additional learning opportunities, earning an <strong>NPTEL</strong>  certification in Python, along with various other certifications from Coursera and Udemy.</p>
+                <p class=" m-5 text-justify">In addition to my academic pursuits, I was an active member of the <strong>Oasis Pain and Palliative Care</strong>  team, where I contributed to community service and developed a sense of empathy and teamwork. These experiences, both technical and humanitarian, have shaped me into a well-rounded professional, ready to take on new challenges.</p>
+            </div>
+        </div>
+
+    </div>
+
+<!-- End of Academics -->
+
+<!-- Certifications Needs to be modified -->
+
+    <div class="container-fluid p-5 text-center mb-0 text-dark" style="background-color: #eee3e3;">
+        <h3 class="sedan-regular font-weight-bold display-4">Certifications</h3>
+        <br><br>
+        
+        <div class="row">
+
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <img src="" alt="..." class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <img src="" alt="..." class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                <img src="" alt="..." class="card-img-top">
+
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+    <!-- End of Certification. Needs to be modified -->
+
+<!-- Footer -->
+<div class="container-fluid p-5 text-center mb-0 text-dark" style="background-color:#afd4ea;">
+    <p class="jersey-10-regular font-weight-bold">Levelling Up, One day at a time.</p>
+    
+    <p class="jersey-10-regular" style="font-size: 35px;">Find Me On</p>
+
+    <div class="d-flex justify-content-center flex-row  mb-3">
+        <div class="p-3"><a href="https://github.com/yadu100" target="_blank"><i class="bi bi-github" ></i></a></div>
+        <div class="p-3"><a href="https://www.linkedin.com/in/yadu-krishnan-34bb191a1/" target="_blank"><i class="bi bi-linkedin" ></i></a></div>
+        <div class="p-3"><a href="https://www.instagram.com/y_a__du/" target="_blank"><i class="bi bi-instagram" ></i></a></div>
+      </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</body>
+</html>
