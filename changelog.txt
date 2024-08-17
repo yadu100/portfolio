@@ -12,3 +12,18 @@ Initiated Portfolio Project
 Modified About page in  Portfolio Project
 	# Modified the front end of About page
 	# made a bit more visually pleasing 
+
+
+17/08/2024
+
+Added Certification Section
+	# In About page where certifications were left out, it is complete
+	# certificate cover image and certificate is obtained via S3 buckets
+
+Added Contact Us section
+
+	# while pressing say hello, it takes us to contact me page
+	# we can fill in the form and through email backend, mail is send with filled in details
+	# tried to set env variables instead of putting details plainly
+	# env variables did not work, need to try again. for tomorrow.
+

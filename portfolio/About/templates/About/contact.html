@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css connect -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+    <!-- Bootstrap Connect -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>yd - portfolio</title>
+</head>
+<body class="bg-light">
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-md navbar-light px-5  " >
+
+
+    <a class="navbar-brand " href="{% url 'About' %}">
+    <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/My+Logo.svg" alt="My Logo" width="75px">
+    </a>
+
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav ">
+            <li class="nav-item">
+                <a class="nav-link new-amsterdam-regular mx-2" href="{% url 'About' %}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link new-amsterdam-regular mx-2" href="#">Work</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link new-amsterdam-regular mx-2" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link new-amsterdam-regular mx-2" href="#">Articles</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'contact' %}" class="nav-link new-amsterdam-regular mx-2 border border-primary bg-primary text-white rounded-pill text-center">Say Hello</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+<!-- End of Navigation -->
+
+<!-- flash message section -->
+{% for msg in messages %}
+
+<div class="alert alert-success alert-dismissible fade show w-50 m-auto text-center" role="alert">
+    <strong>{{msg}}</strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+{% endfor %}
+<!-- end of flash message -->
+
+
+<!-- Contact Body -->
+<div class="container text-center">
+    <br><br><br><br>
+    <p class="display-2 font-weight-bold">Contact Me</p>
+    <br>
+    <p class="display-5 lead text-monospace">If you’d like to chat about a project or job or just have question, please fill in the form below. I aim to get back within 2 days.</p>
+    <hr>
+    <br><br><br>
+</div>
+
+<div class="container mb-5">
+
+    <!-- contact Form content to post -->
+     <form action="#" method="post">
+        {% csrf_token %}
+
+        <div class="form-row mb-4">
+            <div class="form-group col-md-6">
+              <label class="font-weight-bold text-monospace" for="inputname">Name <span style="color: rgb(220, 0, 0);">*</span></label>
+              <input type="text" name="Name" class="form-control form-control-lg" id="inputname" required >
+            </div>
+
+            <div class="form-group col-md-6">
+              <label class="font-weight-bold text-monospace" for="inputemail">Email <span style="color: rgb(220, 0, 0);">*</span></label>
+              <input type="email" name="Email" class="form-control form-control-lg" id="inputemail" required>
+            </div>
+        </div>
+
+        <div class="form-group mb-4">
+            <label class="font-weight-bold text-monospace" for="inputsubject">Subject <span style="color: rgb(220, 0, 0);">*</span></label>
+            <input type="text" class="form-control form-control-lg" id="inputsubject" name="Subject" required>
+        </div>
+
+        <div class="form-group mb-4">
+            <label class="font-weight-bold text-monospace" for="inputmessage">Message <span style="color: rgb(220, 0, 0);">*</span></label>
+            <textarea type="text" name="Message" id="inputmessage" class="form-control form-control-lg" required></textarea>
+        </div>
+
+        <div class="d-flex flex-row justify-content-center">
+            <input type="submit" value="Send Message" class="btn btn-info btn-lg border rounded-pill font-weight-bold">
+        </div>
+
+     </form>
+
+</div>
+
+<!-- end of contact body and post -->
+
+
+
+    
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>
