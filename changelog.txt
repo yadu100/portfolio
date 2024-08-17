@@ -6,3 +6,9 @@ Initiated Portfolio Project
 	# Connected to S3 buckets for storing and using images
 	# Certifications section is not complete. Need to connect to RDS for completion.
 	# Entered gitignore.
+
+17/08/2024
+
+Modified About page in  Portfolio Project
+	# Modified the front end of About page
+	# made a bit more visually pleasing 
