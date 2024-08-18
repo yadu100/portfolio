@@ -44,7 +44,7 @@
   font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 100px;
+  font-size: 89px;
 }
 
 .dm-serif-text-regular-italic {
@@ -53,6 +53,34 @@
   font-style: italic;
 }
 
+#hover-section:hover{
+  opacity: 75%;
+  box-shadow: none;
+}
+
+.khand-regular {
+  font-family: "Khand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+
+}
+
+.khand-medium {
+  font-family: "Khand", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 40px;
+
+}
+
+.khand-semibold {
+  font-family: "Khand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 50px;
+
+}
 
   
 

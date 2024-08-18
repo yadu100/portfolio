@@ -23,7 +23,8 @@
 
     <title>yd - portfolio</title>
 </head>
-<body class="bg-light">
+<body style="background-image: linear-gradient(to bottom, #4b6cc11a, #fff 100vh);">
+
 
 <!-- Navigation -->
 
@@ -46,7 +47,7 @@
                         <a class="nav-link active new-amsterdam-regular mx-2" href="{% url 'About' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link new-amsterdam-regular mx-2" href="#">Work</a>
+                        <a class="nav-link new-amsterdam-regular mx-2" href="{% url 'work' %}">Work</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link new-amsterdam-regular mx-2" href="#">Projects</a>
@@ -65,9 +66,9 @@
 
 <!-- Word Intro -->
 
-    <div class="container-fluid p-5 text-center mb-0" >
+    <div class="container-fluid text-center mb-0" >
             <br><br><br><br>
-            <h1 class="jersey-10-regular font-weight-bold" style="font-size: 75px;">Designer, Full Stack Developer & Mentor</h1>
+            <h1 class="dm-serif-text-regular font-weight-bold">Designer, Full Stack Developer & Mentor</h1>
             <br>
             <h3 class="dancing-script-lead">I design and build simple things and love what I do</h3>
             <br><br><br>
@@ -77,7 +78,7 @@
 
 <!-- Basic Intro -->
 
-<div class="container-fluid p-5  mb-0 text-dark" style="background-color: #F8787D;">
+<div class="container-fluid p-5  mb-0 text-dark" style="background-color: #DDEFFA;">
     <div class="row ">
 
         <div class="text-center col-lg-6 align-self-center">
@@ -99,8 +100,8 @@
     <div class="container-fluid p-5 text-center my-0 text-dark " >
         <div class="row">
             <div class="col-lg-4 col-md-6">
-                <div class="row p-3">
-                    <div class="col-sm-12">
+                <div class="row my-5">
+                    <div class="col-sm-12 d-flex flex-column align-items-center">
                         <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/academics.png" alt="academics" width="60%">
                         <p class="display-4 sedan-regular-italic">Academics</p>
                     </div>
@@ -128,13 +129,15 @@
             {% for certificate in certificates %}
 
             <div class="col-md-6 mb-4">
-              <div class="card bg-light" >
+              <div class="card bg-light" style="height: 500px;">
                 <img src={{certificate.cover_image_url}} alt="Certificate Cover" class="card-img-top" width="250px" height="250px">
 
                 <div class="card-body">
-                  <h5 class="card-title sedan-regular font-weight-bold" style="font-size: xx-large;">{{certificate.certification_name}}</h5>
-                  <p class="card-text lead sedan-regular">{{certificate.certification_description}}</p>
-                  <a href={{certificate.certificate_image_url}} target="_blank" class="btn btn-outline-primary">View</a>
+                <br>
+                  <a href={{certificate.certificate_image_url}} target="_blank" id="hover-section" style="text-decoration: none;"><h5 class="card-title sedan-regular font-weight-bold text-dark" style="font-size: xx-large; ">{{certificate.certification_name}}</h5></a>
+                  
+                  <p class="card-text lead sedan-regular m-1">{{certificate.certification_description}}</p>
+
                 </div>
               </div>
             </div>

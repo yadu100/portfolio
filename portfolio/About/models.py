@@ -10,6 +10,7 @@ class Certifications(models.Model):
     certification_name = models.CharField(max_length=700)
     certification_description = models.TextField(max_length=1000)
     certificate_image_url =  models.CharField(max_length=500, null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
         return self.certification_name

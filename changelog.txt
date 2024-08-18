@@ -27,3 +27,12 @@ Added Contact Us section
 	# tried to set env variables instead of putting details plainly
 	# env variables did not work, need to try again. for tomorrow.
 
+
+18/08/2024
+
+Added Work Section
+	# Added work page which display all the previous experiences
+	# created a model for the previous experiences
+	# created templatetags and custom_filters.py to find the modulus
+	# all experiences will be placed in order reverse of the previous
+	# all images are present in s3 buckets.

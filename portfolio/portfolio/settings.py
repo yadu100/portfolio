@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 
     'About.apps.AboutConfig',
 
+    'Work.apps.WorkConfig',
+
     'storages',
 ]
 

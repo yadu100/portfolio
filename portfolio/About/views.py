@@ -41,7 +41,7 @@ Reply mail        : {email_from}
             fail_silently=False
 
         )
-        messages.success(request, "You mail was sent successfully")
+        messages.success(request, "You message was sent successfully.")
         
         return redirect('contact')
 
