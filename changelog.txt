@@ -45,3 +45,10 @@ Added Individual work section
 	# Took out details from database and displayed in page.
 	# Connected this page to company cover images such that on clicking it, will open the individual work page
 	# Corrected image issues
+
+
+19/08/2024
+
+Make connection
+	# Made Individual work page connection to rest - designation title and view button
+	# checked working and corrected functioning
