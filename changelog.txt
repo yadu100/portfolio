@@ -36,3 +36,12 @@ Added Work Section
 	# created templatetags and custom_filters.py to find the modulus
 	# all experiences will be placed in order reverse of the previous
 	# all images are present in s3 buckets.
+
+
+19/08/2024
+
+Added Individual work section
+	# Added new html template, views and urls which can open individual work page
+	# Took out details from database and displayed in page.
+	# Connected this page to company cover images such that on clicking it, will open the individual work page
+	# Corrected image issues
