@@ -5,7 +5,7 @@ from .models import Experiences
 
 def WorkPage(request):
 
-    experiences = Experiences.objects.all()
+    experiences = Experiences.objects.all().order_by('-entry_num')
 
     return render(request, 'Work/Work_page.html', {'experiences':experiences})
 
@@ -15,7 +15,7 @@ def SingleWorkPage(request,pk):
     techs = single_work.techs_used
     techs = techs.replace(',',' ')
     tech_list = techs.split()
-    print(tech_list)
+    #print(tech_list)
 
 
     return render(request,'Work/singleWork_page.html',{'single_work':single_work, 'tech_list':tech_list})

@@ -45,6 +45,8 @@ INSTALLED_APPS = [
 
     'Work.apps.WorkConfig',
 
+    'Project.apps.ProjectConfig',
+
     'storages',
 ]
 

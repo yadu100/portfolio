@@ -52,3 +52,12 @@ Added Individual work section
 Make connection
 	# Made Individual work page connection to rest - designation title and view button
 	# checked working and corrected functioning
+
+
+20/08/2024
+
+Added Projects Page
+	# Added Projects page 
+	# Added new app Project and model Projects
+	# All data fetched from this model
+	# Need to create single projects page and connect it to buttons and images

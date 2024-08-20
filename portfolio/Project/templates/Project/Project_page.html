@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load custom_filters %}
+
+    <!-- custom css connect -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+    <!-- Bootstrap Connect -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>yd - portfolio</title>
+</head>
+<body style="background-image: linear-gradient(#4b6cc11a, #fff 100vh);">
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-md navbar-light px-5  " >
+
+
+    <a class="navbar-brand " href="{% url 'About' %}">
+    <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/My+Logo.svg" alt="My Logo" width="75px">
+    </a>
+
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav ">
+            <li class="nav-item">
+                <a class="nav-link new-amsterdam-regular mx-2" href="{% url 'About' %}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link new-amsterdam-regular mx-2" href="{% url 'work' %}">Work</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link new-amsterdam-regular mx-2" href="{% url 'project' %}">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link new-amsterdam-regular mx-2" href="#">Articles</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'contact' %}" class="nav-link new-amsterdam-regular mx-2 border border-primary text-primary rounded-pill text-center">Say Hello</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+<!-- End of Navigation -->
+
+<!-- Heading and Subheading Personal Projects -->
+<div class="container text-center">
+    <br><br><br><br>
+    <h1 class=" dm-serif-text-regular">Personal Projects</h1>
+    <br>
+    <p class="display-5 lead text-monospace">Some of my spare time tinkering.</p>
+    <hr>
+    <br><br><br>
+</div>
+<!-- End of Heading -->
+
+<!-- Project Section start -->
+
+<div class="container-fluid">
+
+    {% for project in projects %}
+
+    {% if project.entry_num|mod:2 == 0 %}
+    <!-- left pic right details -->
+    <div class="row">
+        <div class="col-md-6">
+            <!-- picture -->
+            <a href="#" class="d-flex justify-content-center pt-md-5">
+                <img  src={{project.project_homepage_url}} alt="company-image" id="hover-section" class="w-50 mt-md-5" style="background-color: aliceblue;box-shadow: 0 0 5px hwb(0 50% 49%); border-radius: 12px;">
+            </a>
+        </div>
+
+        <div class="col-md-6 p-5 my-5 text-left">
+            <!-- details -->
+            <a href="#" style="text-decoration: none;">
+                <h3 class="khand-semibold text-dark" id="hover-section" >{{project.project_name}}</h3>
+            </a>
+            
+            {% if project.status == "Completed" %}
+            <p class="lead border rounded-pill font-weight-bold w-25 khand-medium text-center" style="background-color: rgba(0, 255, 0, 0.51);" ><i class="bi bi-cloud-check-fill  mx-1" style="font-size: 20px;"></i>  {{project.status}}</p>
+            {% else %}
+            <p class="lead border rounded-pill font-weight-bold w-25 khand-medium text-center" style="background-color: rgba(255, 0, 0, 0.51);" ><i class="bi bi-pause-circle-fill  mx-1" style="font-size: 20px;"></i>  {{project.status}}</p>
+            {% endif %}
+
+            <br><br>
+            <p class="text-justify khand-regular">{{project.short_description}}</p>
+            <br>
+
+            <div>
+                <ul class="khand-regular" style="color: rgba(46, 74, 220, 0.84);">
+                    {% if project.area1 %}
+
+                    <li>{{project.area1}}</li>
+
+                    {% endif %}
+
+                    {% if project.area2 %}
+
+                    <li>{{project.area2}}</li>
+
+                    {% endif %}
+
+                    {% if project.area3 %}
+
+                    <li>{{project.area3}}</li>
+
+                    {% endif %}
+
+                    {% if project.area4 %}
+
+                    <li>{{project.area4}}</li>
+
+                    {% endif %}
+                </ul>
+            </div>
+            <br><br>
+            <div >
+                <a href="#" class="d-flex justify-content-center">
+                    <button class="btn border rounded-pill text-white text-center w-25 m-auto khand-medium font-weight-bold" id="hover-section" style="background-color: rgba(46, 74, 220, 0.84);">View</button>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    {% else %}
+    <!-- right pic left details -->
+     <div class="row">
+        <div class="col-md-6 p-5 my-5 text-left">
+            <!-- details -->
+            <a href="#" style="text-decoration: none;">
+                <h3 class="khand-semibold text-dark" id="hover-section" >{{project.project_name}}</h3>
+            </a>
+            <br>
+
+            {% if project.status == "Completed" %}
+            <p class="lead border rounded-pill font-weight-bold w-25 khand-medium text-center" style="background-color: rgba(0, 255, 0, 0.51);"><i class="bi bi-cloud-check-fill  mx-1" style="font-size: 20px;"></i>  {{project.status}}</p>
+            {% else %}
+            <p class="lead border rounded-pill font-weight-bold w-25 khand-medium text-center" style="background-color: rgba(255, 0, 0, 0.51);"><i class="bi bi-pause-circle-fill  mx-1" style="font-size: 20px;"></i>  {{project.status}}</p>
+            {% endif %}
+
+            <br><br>
+            <p class="text-justify khand-regular">{{project.short_description}}</p>
+            <br>
+
+            <div>
+                <ul class="khand-regular" style="color: rgba(46, 74, 220, 0.84);">
+                    {% if project.area1 %}
+
+                    <li>{{project.area1}}</li>
+
+                    {% endif %}
+
+                    {% if project.area2 %}
+
+                    <li>{{project.area2}}</li>
+
+                    {% endif %}
+
+                    {% if project.area3 %}
+
+                    <li>{{project.area3}}</li>
+
+                    {% endif %}
+
+                    {% if project.area4 %}
+
+                    <li>{{project.area4}}</li>
+
+                    {% endif %}
+                </ul>
+            </div>
+            <br><br>
+            <div >
+                <a href="#" class="d-flex justify-content-center">
+                    <button class="btn border rounded-pill text-white text-center w-25 m-auto khand-medium font-weight-bold" id="hover-section" style="background-color: rgba(46, 74, 220, 0.84);">View</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <!-- picture -->
+            <a href="#" class="d-flex justify-content-center pt-md-5">
+                <img  src={{project.project_homepage_url}} alt="company-image" id="hover-section" class="w-50 mt-md-5" style="background-color: aliceblue;box-shadow: 0 0 5px hwb(0 50% 49%); border-radius: 12px;">
+            </a>
+        </div>
+
+
+
+    </div>
+
+
+    {% endif %}
+
+    <br><br>
+    <div class="container bg-secondary"><hr></div>
+    <br><br>
+
+    {% endfor %}
+
+
+</div>
+
+
+
+<!-- Project section end -->
+
+
+
+<div style="margin-top: 1200px;"></div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>
