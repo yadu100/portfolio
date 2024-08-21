@@ -61,3 +61,12 @@ Added Projects Page
 	# Added new app Project and model Projects
 	# All data fetched from this model
 	# Need to create single projects page and connect it to buttons and images
+
+
+21/08/2024
+
+Added Individual Project section
+	# Added new html template, views and urls which can open individual project page
+	# Took out details from database and displayed in page.
+	# Connected this page to project cover images such that on clicking it, will open the individual work page
+	# Connected to Project page
