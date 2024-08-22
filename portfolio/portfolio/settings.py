@@ -47,6 +47,8 @@ INSTALLED_APPS = [
 
     'Project.apps.ProjectConfig',
 
+    'Articles.apps.ArticlesConfig',
+
     'storages',
 ]
 

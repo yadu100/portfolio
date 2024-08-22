@@ -70,3 +70,12 @@ Added Individual Project section
 	# Took out details from database and displayed in page.
 	# Connected this page to project cover images such that on clicking it, will open the individual work page
 	# Connected to Project page
+
+
+22/08/2024
+
+Added Articles page and Individual Articles Page
+	# Added final Articles page and individual articles page
+	# made connection with the rest of the pages and with each other.
+	# Now website is completely responsive and functioning in local
+	# need to check in postgres and RDS and deploy it via Heroku.
