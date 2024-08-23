@@ -8,6 +8,7 @@ from django.contrib import messages
 
 import os
 
+
 # Create your views here.
 
 def AboutPage(request):

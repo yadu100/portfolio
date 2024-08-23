@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
 import os
 
 from decouple import config
@@ -127,15 +128,20 @@ USE_I18N = True
 
 USE_TZ = True
 
+load_dotenv()
+
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = 'yddjango@gmail.com'
-EMAIL_HOST_PASSWORD = 'vuvf wbut uyab kavq'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_TO_USER = os.environ.get('EMAIL_TO_USER')
 
-EMAIL_TO_USER = 'ykbs100@gmail.com'
+
+
+
 
 
 # Static files (CSS, JavaScript, Images)

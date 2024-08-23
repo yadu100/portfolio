@@ -79,3 +79,9 @@ Added Articles page and Individual Articles Page
 	# made connection with the rest of the pages and with each other.
 	# Now website is completely responsive and functioning in local
 	# need to check in postgres and RDS and deploy it via Heroku.
+
+23/08/2024
+
+Added Environment Variables
+	# Added .env file with env variables and values
+	# Added .gitignore file to ignore .env file
