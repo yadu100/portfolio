@@ -85,3 +85,8 @@ Added Articles page and Individual Articles Page
 Added Environment Variables
 	# Added .env file with env variables and values
 	# Added .gitignore file to ignore .env file
+
+24/08/2024
+
+Connected Postgres Locally
+	# Connected to PostgreSQL locally.
