@@ -90,3 +90,11 @@ Added Environment Variables
 
 Connected Postgres Locally
 	# Connected to PostgreSQL locally.
+
+
+24/08/2024
+
+Connected Postgres on server
+	# Created a new RDS on AWS
+	# Connected RDS to portfolio Django project.
+	# Now this serves as the database for our project
