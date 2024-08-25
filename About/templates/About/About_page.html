@@ -60,57 +60,58 @@
                     </li>
                 </ul>
             </div>
-   
+
     </nav>
 <!-- End of Navigation -->
 
 <!-- Word Intro -->
 
-    <div class="container-fluid text-center mb-0" >
+    <div class="container text-center mb-0" >
             <br><br><br><br>
-            <h1 class="dm-serif-text-regular font-weight-bold">Designer, Full Stack Developer & Mentor</h1>
+            <h1 class="dm-serif-text-regular font-weight-bold" style="word-wrap: break-word;">Designer, Full Stack Developer & Mentor</h1>
             <br>
             <h3 class="dancing-script-lead">I design and build simple things and love what I do</h3>
             <br><br><br>
-            <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/computer.svg" alt="devices" width="50%">
+            <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/computer.svg" class="w-75" alt="devices">
     </div>
+    <br><br>
 <!-- End of Word Intro -->
 
 <!-- Basic Intro -->
 
-<div class="container-fluid p-5  mb-0 text-dark" style="background-color: #DDEFFA;">
+<div class="container p-5  mb-0 text-dark" style="background-color: #DDEFFA; border-radius:5px">
     <div class="row ">
 
-        <div class="text-center col-lg-6 align-self-center">
-            <h3 class="sedan-regular font-weight-bold display-4">Hi, I'm Yadu. Nice to meet you</h3>
+        <div class="text-center col align-self-center">
+            <h3 class="sedan-regular font-weight-bold display-4 text-center">Hi, I'm Yadu. Nice to meet you</h3>
             <br><br>
-            <p class="sedan-regular-italic display-5">With 3 years of experience as a Python developer, I've specialized in building dynamic websites using Django and front-end tools. <br> My work includes designing and developing robust web applications and managing databases with PostgreSQL. <br> I'm passionate about coding, continuously honing my skills, and eager to tackle new challenges in the ever-evolving tech landscape.</p>
-        </div>
+            <p class="sedan-regular-italic display-5 text-justify">With 3 years of experience as a Python developer, I've specialized in building dynamic websites using Django and front-end tools. <br> My work includes designing and developing robust web applications and managing databases with PostgreSQL. <br> I'm passionate about coding, continuously honing my skills, and eager to tackle new challenges in the ever-evolving tech landscape.</p>
+            <br>
+            <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/my+pic.jpg" alt="profile-image" class="w-50" style="box-shadow: 0 0 5px hwb(0 0% 100%); border-radius: 8px;">
 
-        <div class="col-lg-6 text-center">
-            <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/my+pic.jpg" alt="profile-image" width="400px" height="400px" class="border " style="box-shadow: 0 0 5px hwb(0 0% 100%); border-radius: 8px;">
         </div>
-
     </div>
 </div>
+
 <!-- End of Basic Intro -->
 
 <!-- Academics -->
 
-    <div class="container-fluid p-5 text-center my-0 text-dark " >
+    <div class="container p-5 text-center my-0 text-dark " >
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="row my-5">
-                    <div class="col-sm-12 d-flex flex-column align-items-center">
-                        <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/academics.png" alt="academics" width="60%">
+                <div class="d-flex flex-column justify-content-center ">
+                    <div class="align-self-center">
+                        <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/academics.png" alt="academics" class='w-50'>
+                    </div>
+
+                    <div class="align-self-center">
                         <p class="display-4 sedan-regular-italic">Academics</p>
                     </div>
-                    
+
                 </div>
-            </div>
-            <div class="col-lg-8 col-md-6  p-5 sedan-regular-italic" >
-                <p class=" m-5 text-justify">I graduated with a <strong>Bachelor of Engineering</strong>  in <strong>Electronics and Communication Engineering</strong>  from <strong> Government Engineering College, Thrissur</strong>, achieving an <strong>8.61 CGPA</strong> . During my time at college, I cultivated a deep interest in Python, which laid the groundwork for my career as a developer. My passion for programming led me to pursue additional learning opportunities, earning an <strong>NPTEL</strong>  certification in Python, along with various other certifications from Coursera and Udemy.</p>
-                <p class=" m-5 text-justify">In addition to my academic pursuits, I was an active member of the <strong>Oasis Pain and Palliative Care</strong>  team, where I contributed to community service and developed a sense of empathy and teamwork. These experiences, both technical and humanitarian, have shaped me into a well-rounded professional, ready to take on new challenges.</p>
+            <div class="sedan-regular-italic" >
+                <p class="text-justify">I graduated with a <strong>Bachelor of Engineering</strong>  in <strong>Electronics and Communication Engineering</strong>  from <strong> Government Engineering College, Thrissur</strong>, achieving an <strong>8.61 CGPA</strong> . During my time at college, I cultivated a deep interest in Python, which laid the groundwork for my career as a developer. My passion for programming led me to pursue additional learning opportunities, earning an <strong>NPTEL</strong>  certification in Python, along with various other certifications from Coursera and Udemy.</p>
+                <p class="text-justify">In addition to my academic pursuits, I was an active member of the <strong>Oasis Pain and Palliative Care</strong>  team, where I contributed to community service and developed a sense of empathy and teamwork. These experiences, both technical and humanitarian, have shaped me into a well-rounded professional, ready to take on new challenges.</p>
             </div>
         </div>
 
@@ -120,10 +121,10 @@
 
 <!-- Certifications Needs to be modified -->
 
-    <div class="container-fluid p-5 text-center mb-0 text-dark" style="background-color: #eee3e3;">
+    <div class="container text-center my-4 py-4 text-dark" style="background-color: #eee3e3;border-radius:5px">
         <h3 class="sedan-regular font-weight-bold display-4">Certifications</h3>
         <br><br>
-        
+
         <div class="row">
 
             {% for certificate in certificates %}
@@ -135,7 +136,7 @@
                 <div class="card-body">
                 <br>
                   <a href={{certificate.certificate_image_url}} target="_blank" id="hover-section" style="text-decoration: none;"><h5 class="card-title sedan-regular font-weight-bold text-dark" style="font-size: xx-large; ">{{certificate.certification_name}}</h5></a>
-                  
+
                   <p class="card-text lead sedan-regular m-1">{{certificate.certification_description}}</p>
 
                 </div>
@@ -150,7 +151,7 @@
 <!-- Footer -->
 <div class="container-fluid p-5 text-center mb-0 text-dark" style="background-color:#afd4ea;">
     <p class="jersey-10-regular font-weight-bold">Levelling Up, One day at a time.</p>
-    
+
     <p class="jersey-10-regular" style="font-size: 35px;">Find Me On</p>
 
     <div class="d-flex justify-content-center flex-row  mb-3">

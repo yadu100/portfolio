@@ -14,10 +14,11 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
-from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+env_path = BASE_DIR / '.env'
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4*u^hw_z81+$6i7*mz+o&-civfoob#qqjip%%ph!%)^libpzi$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','yadu.pythonanywhere.com']
 
 
 # Application definition
@@ -97,16 +98,17 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #     }
 # }
 
-load_dotenv()
+load_dotenv(dotenv_path=env_path)
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('NAME'),
-        'USER': os.environ.get('USER'),
-        'PASSWORD' : os.environ.get('PASSWORD'),
-        'HOST' : os.environ.get('HOST'),
-        'PORT' : os.environ.get('PORT'),
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('USER'),
+        'PASSWORD' : os.getenv('PASSWORD'),
+        'HOST' : os.getenv('HOST'),
+        'PORT' : os.getenv('PORT'),
     }
 }
 
@@ -148,9 +150,10 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_TO_USER = os.environ.get('EMAIL_TO_USER')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_TO_USER = os.getenv('EMAIL_TO_USER')
+
 
 
 

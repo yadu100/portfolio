@@ -11,7 +11,7 @@
 
     <!-- Bootstrap Connect -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +69,7 @@
 <!-- Heading and Subheading Professional Experience -->
 <div class="container text-center">
     <br><br><br><br>
-    <h1 class=" dm-serif-text-regular">Professional Experience</h1>
+    <h1 class=" dm-serif-text-regular">Career</h1>
     <br>
     <p class="display-5 lead text-monospace">Showcasing my journey through various roles and projects that have shaped my professional expertise.</p>
     <hr>
@@ -87,14 +87,14 @@
 
     <div class="row">
 
-        <div class="col-md-8">
+        <div class="col-md-6">
             <a href="{% url 'singlework' experience.id %}" class="d-flex justify-content-center pt-md-5">
                 <img  src={{experience.company_image_url}} alt="company-image" id="hover-section" class="w-50 mt-md-5" style="background-color: aliceblue;box-shadow: 0 0 5px hwb(0 50% 49%); border-radius: 12px;">
             </a>
         </div>
 
 
-        <div class="col-md-4 p-5 my-5 text-left">
+        <div class="col-md-6 p-5 my-5 text-left">
             <a href="{% url 'singlework' experience.id %}" style="text-decoration: none;">
             <h3 class="khand-semibold text-dark" id="hover-section" >{{experience.designation}}</h3>
             </a>
@@ -105,7 +105,7 @@
             <p class="text-justify khand-regular">{{experience.short_description}}</p>
             <br>
             <div>
-                
+
             <ul class="khand-regular text-info"  >
 
                 {% if experience.duty1 %}
@@ -137,7 +137,7 @@
         </div>
         <br><br>
         <div >
-            <a href="{% url 'singlework' experience.id %}" class="d-flex justify-content-center">
+            <a href="{% url 'singlework' experience.id %}" class="d-flex justify-content-center" style="text-decoration: none;">
                 <button class="btn btn-info border rounded-pill text-white text-center w-25 m-auto khand-medium font-weight-bold">View</button>
             </a>
         </div>
@@ -148,7 +148,7 @@
 
     <div class="row">
 
-        <div class="col-md-4 p-5 my-5 text-left">
+        <div class="col-md-6 p-5 my-5 text-left">
             <a href="{% url 'singlework' experience.id %}" style="text-decoration: none;">
             <h3 class="khand-semibold text-dark" id="hover-section">{{experience.designation}}</h3>
             </a>
@@ -159,7 +159,7 @@
             <p class="text-justify khand-regular">{{experience.short_description}}</p>
             <br>
             <div>
-                
+
             <ul class="khand-regular text-info"  >
 
                 {% if experience.duty1 %}
@@ -191,18 +191,18 @@
             </div>
             <br><br>
             <div>
-                <a href="{% url 'singlework' experience.id %}" class="d-flex justify-content-center">
+                <a href="{% url 'singlework' experience.id %}" class="d-flex justify-content-center" style="text-decoration: none;">
                     <button class="btn btn-info border rounded-pill text-white text-center w-25 m-auto khand-medium font-weight-bold">View</button>
                 </a>
             </div>
         </div>
 
-        <div class="col-md-8">
+        <div class="col-md-6">
             <a href="{% url 'singlework' experience.id %}" class="d-flex justify-content-center pt-md-5">
                 <img  src={{experience.company_image_url}} alt="company-image" id="hover-section" class="w-50 mt-md-5" style="background-color: aliceblue;box-shadow: 0 0 5px hwb(0 50% 49%); border-radius: 12px;">
             </a>
         </div>
- 
+
 </div>
 
 
