@@ -14,7 +14,8 @@ import os
 def AboutPage(request):
 
     certificates = Certifications.objects.all()
-    return render(request, 'About/About_page.html', {'certificates':certificates})
+    return render(request,'index.html')
+    #return render(request, 'About/About_page.html', {'certificates':certificates})
 
 def ContactPage(request):
 
