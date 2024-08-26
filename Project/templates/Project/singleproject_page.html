@@ -117,10 +117,10 @@
 
 <div class="d-flex justify-content-center khand-medium text-dark">
     {% if project.source_code_url %}
-    <a href={{project.source_code_url}} class="btn btn-secondary btn-lg  mx-3 font-weight-bold" target="_blank">Source Code</a>
+    <a href={{project.source_code_url}} target="_blank" style="text-decoration: none;"><button class="hover-button mx-3 border rounded"><span>Source Code</span></button></a>
     {% endif %}
     {% if project.project_url %}
-    <a href={{project.project_url}} class="btn btn-success btn-lg mx-3  font-weight-bold" target="_blank">Visit Site</a>
+    <a href={{project.project_url}}  target="_blank" style="text-decoration: none;"><button class="hover-button mx-3 border rounded"><span>Visit Site</span></button></a>
     {% endif %}
 </div>
 

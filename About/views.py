@@ -8,13 +8,17 @@ from django.contrib import messages
 
 import os
 
+from datetime import datetime
+
+current_year = datetime.now().year
+
 
 # Create your views here.
 
 def AboutPage(request):
 
     certificates = Certifications.objects.all()
-    return render(request, 'About/About_page.html', {'certificates':certificates})
+    return render(request, 'About/About_page.html', {'certificates':certificates, 'current_year':current_year})
 
 def ContactPage(request):
 
@@ -47,4 +51,4 @@ Reply mail        : {email_from}
         return redirect('contact')
 
 
-    return render(request, 'About/contact.html',{})
+    return render(request, 'About/contact.html',{'current_year':current_year})

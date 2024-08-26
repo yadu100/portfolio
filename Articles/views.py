@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from . models import Articles
+from datetime import datetime
+
+current_year = datetime.now().year
 
 from .utils import SearchItem
 # Create your views here.
@@ -9,7 +12,7 @@ def ArticlesPage(request):
     articles,search_query = SearchItem(request)
     no_of_items = len(articles)
 
-    return render(request, 'Articles/Articles_page.html',{'articles':articles, 'search_query':search_query, 'no_of_items':no_of_items})
+    return render(request, 'Articles/Articles_page.html',{'articles':articles, 'search_query':search_query, 'no_of_items':no_of_items, 'current_year':current_year})
 
 
 def SingleArticlePage(request,pk):
