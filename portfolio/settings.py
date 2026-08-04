@@ -44,9 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.staticfiles',
+
 
     'cloudinary_storage',
-    'django.contrib.staticfiles',
 
     'About.apps.AboutConfig',
     'Work.apps.WorkConfig',
@@ -175,6 +176,7 @@ STORAGES = {
     },
 }
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
