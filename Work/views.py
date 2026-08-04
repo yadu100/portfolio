@@ -9,7 +9,6 @@ current_year = datetime.now().year
 # Create your views here.
 
 def WorkPage(request):
-
     experiences_list = Experiences.objects.all().order_by('-entry_num')
     paginator = Paginator(experiences_list, 5)
     page_number = request.GET.get('page')
@@ -17,13 +16,17 @@ def WorkPage(request):
 
     return render(request, 'Work/Work_page.html', {'experiences':experiences, 'current_year':current_year})
 
-
 def SingleWorkPage(request,pk):
     single_work = get_object_or_404(Experiences, id=pk)
-    techs = single_work.techs_used
-    techs = techs.replace(',',' ')
-    tech_list = techs.split()
-    #print(tech_list)
+    
+    # Safe tech list generation
+    tech_list = []
+    if single_work.techs_used:
+        techs = single_work.techs_used.replace(',',' ')
+        tech_list = techs.split()
 
-
-    return render(request,'Work/singleWork_page.html',{'single_work':single_work, 'tech_list':tech_list})
+    return render(request,'Work/singleWork_page.html',{
+        'single_work': single_work, 
+        'tech_list': tech_list,
+        'current_year': current_year  # Fixes the missing footer year!
+    })
