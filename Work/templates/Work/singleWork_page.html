@@ -3,7 +3,7 @@
 {% block nav %}
 <nav class="navbar navbar-light px-5">
     <a class="navbar-brand" href="{% url 'About' %}">
-        <img src="https://portfolio--bucket.s3.eu-north-1.amazonaws.com/My+Logo.svg" alt="My Logo" width="75px">
+        <img src="{% static 'images/logo.png' %}" alt="My Logo" width="75px">
     </a>
     <div class="justify-content-end mx-5">
         <ul class="navbar-nav">
