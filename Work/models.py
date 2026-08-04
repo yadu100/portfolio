@@ -5,7 +5,7 @@ import uuid
 class Experiences(models.Model):
     entry_num = models.IntegerField(null=True, blank=True)
     company_name = models.CharField(max_length=200, null=True, blank=True)
-    company_image_url = models.CharField(max_length=700, null=True, blank=True)
+    company_image = models.ImageField(upload_to='portfolio_images/', null=True, blank=True)
     designation = models.CharField(max_length=200, null=True, blank=True)
     department = models.CharField(max_length=200, null=True, blank=True)
     start_year = models.CharField(max_length=5, null=True, blank=True)

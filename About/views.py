@@ -6,8 +6,6 @@ from django.conf import settings
 
 from django.contrib import messages
 
-import os
-
 from datetime import datetime
 
 current_year = datetime.now().year
@@ -38,15 +36,17 @@ Reply mail        : {email_from}
                     
 """
 
-        send_mail(
-            subject,
-            content,
-            settings.EMAIL_HOST_USER,
-            [settings.EMAIL_TO_USER],
-            fail_silently=False
-
-        )
-        messages.success(request, "You message was sent successfully.")
+        try:
+            send_mail(
+                subject,
+                content,
+                settings.EMAIL_HOST_USER,
+                [settings.EMAIL_TO_USER],
+                fail_silently=False,
+            )
+            messages.success(request, "Your message was sent successfully.")
+        except Exception:
+            messages.error(request, "Failed to send your message. Please try again later.")
         
         return redirect('contact')
 

@@ -7,30 +7,30 @@ class Articles(models.Model):
     heading = models.CharField(max_length=800, null=True, blank=True)
     key_point = models.CharField(max_length=200, null=True, blank=True)
 
-    date = models.DateField(null=True, blank=True, auto_now_add=True)
+    date = models.DateField(null=True, blank=True)
 
     minute_read = models.CharField(max_length=5, null=True, blank=True)
 
     primary_note = models.CharField(max_length=1000, null=True, blank=True)
 
     sub_heading1 = models.CharField(max_length=800, null=True, blank=True)
-    picture1 = models.CharField(max_length=500, null=True, blank=True)
+    picture1 = models.ImageField(upload_to='portfolio_images/', null=True, blank=True)
     sub_text1 = models.TextField(max_length=1200, null=True, blank=True)
 
     sub_heading2 = models.CharField(max_length=800, null=True, blank=True)
-    picture2 = models.CharField(max_length=500, null=True, blank=True)
+    picture2 = models.ImageField(upload_to='portfolio_images/', null=True, blank=True)
     sub_text2 = models.TextField(max_length=1200, null=True, blank=True)
 
     sub_heading3 = models.CharField(max_length=800, null=True, blank=True)
-    picture3 = models.CharField(max_length=500, null=True, blank=True)
+    picture3 = models.ImageField(upload_to='portfolio_images/', null=True, blank=True)
     sub_text3 = models.TextField(max_length=1200, null=True, blank=True)
 
     sub_heading4 = models.CharField(max_length=800, null=True, blank=True)
-    picture4 = models.CharField(max_length=500, null=True, blank=True)
+    picture4 = models.ImageField(upload_to='portfolio_images/', null=True, blank=True)
     sub_text4 = models.TextField(max_length=1200, null=True, blank=True)
 
     sub_heading5 = models.CharField(max_length=800, null=True, blank=True)
-    picture5 = models.CharField(max_length=500, null=True, blank=True)
+    picture5 = models.ImageField(upload_to='portfolio_images/', null=True, blank=True)
     sub_text5 = models.TextField(max_length=1200, null=True, blank=True)
 
 

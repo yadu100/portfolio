@@ -8,7 +8,7 @@ class Projects(models.Model):
     project_name = models.CharField(max_length=500, null=True, blank=True)
     project_type = models.CharField(max_length=200, null=True, blank=True)
     
-    project_homepage_url = models.CharField(max_length=800, null=True,blank=True)
+    project_image = models.ImageField(upload_to='portfolio_images/', null=True, blank=True)
 
     area1 = models.CharField(max_length=800, null=True,blank=True)
     area2 = models.CharField(max_length=800, null=True,blank=True)
